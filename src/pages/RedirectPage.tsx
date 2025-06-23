@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useSearchParams } from "react-router-dom";
+import { API_BASE_URL } from "@/config";
 
 export default function RedirectPage() {
   const { shortcode } = useParams();
@@ -10,7 +11,7 @@ export default function RedirectPage() {
   const instant = searchParams.get("instant") === "true";
 
   useEffect(() => {
-    fetch(`http://localhost:5001/api/resolve/${shortcode}`)
+    fetch(`${API_BASE_URL}/api/resolve/${shortcode}`)
       .then(r => r.json())
       .then(data => {
         if (data.longUrl) {
