@@ -1,0 +1,19 @@
+# dependencies
+node_modules/
+.env
+
+# build output
+dist/
+*.log
+
+# system
+.DS_Store
+Thumbs.db
+
+# IDE/editor
+.vscode/
+.idea/
+*.sw?
+
+# macOS files
+*.DS_Store
